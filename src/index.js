@@ -1,11 +1,11 @@
 import  express  from "express";
 import cors from "cors";
 
-import EventController from './controllers/event-controller';
-import UserController from './controllers/user-controller';
-import ProvinceController from './controllers/province-controller';
-import EventLocationController from './controllers/event-location-controller';
-import EventCategoryController from './controllers/event-category-controller';
+import EventController from './controllers/event-controller.js';
+import UserController from './controllers/user-controller.js';
+import ProvinceController from './controllers/province-controller.js';
+import EventLocationController from './controllers/event-location-controller.js';
+import EventCategoryController from './controllers/event-category-controller.js';
 
 const app = express();
 const port = 3000;

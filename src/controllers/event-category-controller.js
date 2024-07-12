@@ -51,7 +51,7 @@ EventCategoryController.post('/', async (req, res) => {
 
 EventCategoryController.put('/', async (req, res) => {
     const id = getInteger(req.body.id);
-    if (id === null) {
+    if (id == null) {
         res.status(400).send('El id de la categoría debe ser un número entero');
         return;
     }
@@ -70,7 +70,7 @@ EventCategoryController.put('/', async (req, res) => {
 
 EventCategoryController.delete('/:id', async (req, res) => {
     const id = getInteger(req.params.id);
-    if (id === null) {
+    if (id == null) {
         res.status(400).send('El id de la categoría debe ser un número entero');
         return;
     }

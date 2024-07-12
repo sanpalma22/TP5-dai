@@ -22,7 +22,7 @@ const verifyToken = (req, res, next) => {
 
 EventController.get('/', async (req, res) => {
     let result;
-    if (req.query === undefined || Object.keys(req.query).length === 0) {
+    if (req.query == undefined || Object.keys(req.query).length == 0) {
         result = await eventService.getAllEvents();
     }
     else {
@@ -57,7 +57,7 @@ EventController.get('/:id', async (req, res) => {
 
 EventController.get('/:id/enrollment', async (req, res) => {
     const id = getInteger(req.params.id);
-    if (id === null) {
+    if (id == null) {
         res.status(400).send('El id de evento debe ser un número entero');
         return;
     }
@@ -97,7 +97,7 @@ EventController.put('/', verifyToken, async (req, res) => {
 
 EventController.delete('/:id', verifyToken, async (req, res) => {
     const id = getInteger(req.params.id);
-    if (id === null) {
+    if (id == null) {
         res.status(400).send('El id de evento debe ser un número entero');
         return;
     }
@@ -112,7 +112,7 @@ EventController.delete('/:id', verifyToken, async (req, res) => {
 
 EventController.post('/:id/enrollment', verifyToken, async (req, res) => {
     const id = getInteger(req.params.id);
-    if (id === null) {
+    if (id == null) {
         res.status(400).send('El id de evento debe ser un número entero');
         return;
     }
@@ -132,7 +132,7 @@ EventController.post('/:id/enrollment', verifyToken, async (req, res) => {
 
 EventController.delete('/:id/enrollment', verifyToken, async (req, res) => {
     const id = getInteger(req.params.id);
-    if (id === null) {
+    if (id == null) {
         res.status(400).send('El id de evento debe ser un número entero');
         return;
     }
@@ -150,7 +150,7 @@ EventController.delete('/:id/enrollment', verifyToken, async (req, res) => {
 
 EventController.patch('/:id/enrollment/:rating', verifyToken, async (req, res) => {
     const id = getInteger(req.params.id);
-    if (id === null) {
+    if (id == null) {
         res.status(400).send('El id de evento debe ser un número entero');
         return;
     }
